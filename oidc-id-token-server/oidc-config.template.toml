@@ -1,0 +1,14 @@
+issuer = "https://auth.example.erato.local"
+algorithm = "HS256"
+shared_secret = "replace-this-demo-secret-with-at-least-32-bytes"
+audiences = ["erato-local", "erato-preview"]
+clock_skew_seconds = 30
+
+[groups."finance-team"]
+allowed_files = ["finance-pipeline.csv", "leadership-notes.md"]
+
+[groups."engineering-team"]
+allowed_files = ["eng-backlog.md", "ops-runbook.md", "change-window.txt"]
+
+[groups."security-team"]
+allowed_files = ["security-checklist.md", "incident-digest.md", "ops-runbook.md"]

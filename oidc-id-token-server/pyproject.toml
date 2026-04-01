@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "oidc-id-token-file-server"
+version = "0.1.0"
+description = "FastMCP example server with OIDC-style ID token authorization."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+  "fastmcp==3.1.1",
+  "pyjwt>=2.10.1",
+]
+
+[project.scripts]
+oidc-id-token-file-server = "oidc_id_token_file_server:main"
+
+[tool.uv]
+package = true

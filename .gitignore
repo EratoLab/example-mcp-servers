@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Local OIDC configuration copied from the template.
+oidc-id-token-server/oidc-config.toml

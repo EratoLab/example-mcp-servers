@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "api-key-file-server"
+version = "0.1.0"
+description = "FastMCP example server with fixed API key authorization."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+  "fastmcp==3.1.1",
+]
+
+[project.scripts]
+api-key-file-server = "api_key_file_server:main"
+
+[tool.uv]
+package = true
