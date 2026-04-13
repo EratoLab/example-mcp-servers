@@ -20,6 +20,11 @@ The default demo key is:
 demo-erato-api-key
 ```
 
+## Erato Docs
+
+- General MCP server docs: https://erato.chat/docs/features/mcp_servers
+- Relevant authentication method: fixed authentication in the configuration reference: https://erato.chat/docs/configuration#mcp_serversserver_idauthentication
+
 ## Erato Configuration
 
 Example `erato.toml` block without the API key, which will expose only public files:

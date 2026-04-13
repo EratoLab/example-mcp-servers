@@ -54,6 +54,11 @@ prints it to stdout. Pass a second argument to choose a specific audience from
 the configured list, and an optional third argument with a comma-separated
 groups list such as `engineering-team,security-team`.
 
+## Erato Docs
+
+- General MCP server docs: https://erato.chat/docs/features/mcp_servers
+- Relevant authentication method: forwarded authentication in the configuration reference: https://erato.chat/docs/configuration#mcp_serversserver_idauthentication
+
 ## Erato Configuration
 
 Example `erato.toml` block:

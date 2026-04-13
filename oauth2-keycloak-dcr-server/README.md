@@ -66,6 +66,11 @@ If you specifically want browser-origin anonymous DCR like in the MCP tutorial,
 you can additionally configure Keycloak's client-registration policies in the
 admin UI. For the local Erato flow below, that is not required.
 
+## Erato Docs
+
+- General MCP server docs: https://erato.chat/docs/features/mcp_servers
+- Relevant authentication method: OAuth2 authentication in the configuration reference: https://erato.chat/docs/configuration#mcp_serversserver_idauthentication
+
 ## Erato Configuration
 
 Erato's MCP authentication docs use a native OAuth2 mode for remote MCP
