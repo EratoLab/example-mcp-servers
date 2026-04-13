@@ -30,3 +30,11 @@ just run
 ```
 
 All projects default to FastMCP's streamable HTTP transport and are meant to be connected from Erato using an `erato.toml` entry similar to the examples in each project README.
+
+For interactive local testing, you can also use the [MCP Inspector](https://modelcontextprotocol.io/docs/tools/inspector). After starting a server with `just run`, launch the inspector against that server's streamable HTTP endpoint with:
+
+```bash
+npx @modelcontextprotocol/inspector
+```
+
+Then connect it to the server URL from the relevant project README, such as `http://127.0.0.1:8001/mcp`.

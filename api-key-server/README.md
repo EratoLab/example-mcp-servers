@@ -11,6 +11,14 @@ just install
 just run
 ```
 
+For interactive testing, you can inspect the server with the [MCP Inspector](https://modelcontextprotocol.io/docs/tools/inspector):
+
+```bash
+npx @modelcontextprotocol/inspector
+```
+
+Then connect to `http://127.0.0.1:8001/mcp` and add `X-Api-Key: demo-erato-api-key` if you want full access.
+
 The server listens on `http://127.0.0.1:8001/mcp` by default. Override with
 `API_KEY_SERVER_HOST`, `API_KEY_SERVER_PORT`, or `API_KEY_SERVER_KEY`.
 

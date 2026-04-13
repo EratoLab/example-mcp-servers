@@ -25,6 +25,14 @@ just install
 just run
 ```
 
+For interactive testing, you can inspect the server with the [MCP Inspector](https://modelcontextprotocol.io/docs/tools/inspector):
+
+```bash
+npx @modelcontextprotocol/inspector
+```
+
+Then connect to `http://127.0.0.1:8003/mcp`. Use the inspector together with a valid Keycloak-issued bearer token when you want to exercise the protected tools.
+
 The MCP server listens on `http://127.0.0.1:8003/mcp` by default.
 
 Override with:

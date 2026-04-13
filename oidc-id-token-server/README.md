@@ -14,6 +14,14 @@ just install
 just run
 ```
 
+For interactive testing, you can inspect the server with the [MCP Inspector](https://modelcontextprotocol.io/docs/tools/inspector):
+
+```bash
+npx @modelcontextprotocol/inspector
+```
+
+Then connect to `http://127.0.0.1:8002/mcp` and provide an `Authorization: Bearer ...` header with a valid ID token when you want to test group-based access.
+
 The server listens on `http://127.0.0.1:8002/mcp` by default. Override with
 `OIDC_SERVER_HOST`, `OIDC_SERVER_PORT`, or `OIDC_CONFIG_PATH`.
 
