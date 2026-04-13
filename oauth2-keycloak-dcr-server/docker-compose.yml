@@ -1,0 +1,30 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.1
+    command: ["start-dev"]
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${KC_BOOTSTRAP_ADMIN_USERNAME:-admin}
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KC_BOOTSTRAP_ADMIN_PASSWORD:-admin}
+    ports:
+      - "127.0.0.1:8080:8080"
+
+  keycloak-bootstrap:
+    image: quay.io/keycloak/keycloak:26.1
+    depends_on:
+      - keycloak
+    environment:
+      KEYCLOAK_URL: ${KEYCLOAK_URL:-http://keycloak:8080}
+      KEYCLOAK_REALM: ${KEYCLOAK_REALM:-mcp-demo}
+      KEYCLOAK_ADMIN_USERNAME: ${KC_BOOTSTRAP_ADMIN_USERNAME:-admin}
+      KEYCLOAK_ADMIN_PASSWORD: ${KC_BOOTSTRAP_ADMIN_PASSWORD:-admin}
+      MCP_RESOURCE_URL: ${MCP_RESOURCE_URL:-http://127.0.0.1:8003/mcp}
+      DEMO_USERNAME: ${DEMO_USERNAME:-erato-demo}
+      DEMO_EMAIL: ${DEMO_EMAIL:-erato-demo@example.com}
+      DEMO_PASSWORD: ${DEMO_PASSWORD:-erato-demo-password}
+      ERATO_CLIENT_ID: ${ERATO_CLIENT_ID:-erato-local-dev}
+      MCP_TOOLS_SCOPE: ${MCP_TOOLS_SCOPE:-mcp:tools}
+      MCP_ADMIN_SCOPE: ${MCP_ADMIN_SCOPE:-mcp:admin}
+    volumes:
+      - ./keycloak/bootstrap-keycloak.sh:/opt/keycloak/bootstrap-keycloak.sh:ro
+    entrypoint: ["/bin/sh", "/opt/keycloak/bootstrap-keycloak.sh"]
+    restart: "no"

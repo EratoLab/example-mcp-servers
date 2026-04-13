@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "oauth2-keycloak-dcr-server"
+version = "0.1.0"
+description = "FastMCP example server with Keycloak-backed OAuth2 and dynamic client registration."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+  "fastmcp==3.1.1",
+]
+
+[project.scripts]
+oauth2-keycloak-dcr-server = "oauth2_keycloak_dcr_server:main"
+
+[tool.uv]
+package = true
